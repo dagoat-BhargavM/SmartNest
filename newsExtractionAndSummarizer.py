@@ -94,8 +94,8 @@ for stock_ticker in unique_stocks:
 
     analyst_summary = """
     Mimic the role of an experienced financial
-    analyst with the task of synthesizing an updated and detailed summary by considering all articles 
-    provided above and let the summary be of good length.
+    analyst and distill the stock’s daily news and generate a concise daily news
+    summary.
     Instructions: Integrate the most pertinent information,
     distinguish factual news and analysts' opinions.
     """
@@ -129,3 +129,14 @@ for stock_ticker in unique_stocks:
         print(f"DeepSeek response for {stock_ticker}:", output)
     else:
         print(f"Error for {stock_ticker}: {response.status_code}, {response.text}")
+
+
+
+
+"""
+    Mimic the role of an experienced financial
+    analyst with the task of synthesizing an updated and detailed summary by considering all articles 
+    provided above and let the summary be of good length.
+    Instructions: Integrate the most pertinent information,
+    distinguish factual news and analysts' opinions.
+"""
