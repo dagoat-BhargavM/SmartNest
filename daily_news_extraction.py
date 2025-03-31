@@ -5,8 +5,9 @@ import re
 
 # Define the ticker symbol and URL
 ticker = "ZOMATO"
-query = f"{ticker} nse"
-url = f"https://www.google.com/search?q={query}&tbm=nws"
+query = f"{ticker} stock"
+encoded_query = requests.utils.quote(query)
+url = f"https://www.google.com/search?q={encoded_query}&tbm=nws"
 
 # Set headers to mimic a browser
 headers = {
